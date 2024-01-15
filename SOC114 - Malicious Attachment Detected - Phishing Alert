@@ -1,0 +1,72 @@
+# Analyst Report
+
+## MALICIOUS
+
+1. **Suspicious Connection from Equation Editor**
+    - **EQNEDT32.EXE (PID: 1924)**
+        - The Equation Editor process (EQNEDT32.EXE) has initiated a connection that raises suspicion. Further investigation is warranted to determine the nature and intent of this connection.
+
+## SUSPICIOUS
+
+1. **Application Self-Launch**
+    - **EXCEL.EXE (PID: 1816)**
+        - The Excel application (EXCEL.EXE) launched itself, indicating an unusual behavior that requires scrutiny to identify potential malicious activities.
+2. **Internet Settings Read**
+    - **EQNEDT32.EXE (PID: 1924)**
+        - EQNEDT32.EXE is reading Internet settings, suggesting a potential attempt to gather information or configure network-related parameters. This action demands closer examination to assess the motive behind accessing these settings.
+3. **Binary or Script Retrieval from the Internet**
+    - **EQNEDT32.EXE (PID: 1924)**
+        - EQNEDT32.EXE is observed retrieving a binary or script from the Internet. This behavior is suspicious and necessitates further analysis to understand the content and purpose of the downloaded file.
+
+## INFO
+
+1. **Application Self-Launch**
+    - **iexplore.exe (PID: 116)**
+        - Internet Explorer (iexplore.exe) has autonomously launched, indicating potential abnormal activity that requires investigation to ascertain the cause and potential risks.
+2. **Computer Name Read**
+    - **EQNEDT32.EXE (PID: 1924)**
+        - EQNEDT32.EXE is reading the computer name, suggesting an attempt to gather system information. The purpose behind this action should be examined to determine if it poses any security threats.
+3. **Downloaded File Usage**
+    - **iexplore.exe (PID: 116)**
+    - **EXCEL.EXE (PID: 1816)**
+    - **WinRAR.exe (PID: 1936)**
+        - Multiple processes, including Internet Explorer, Excel, and WinRAR, are using a downloaded file. This warrants a detailed analysis of the file's content and the processes involved to understand potential implications.
+4. **Supported Languages Check**
+    - **EQNEDT32.EXE (PID: 1924)**
+        - EQNEDT32.EXE is checking supported languages, indicating a potential attempt to adapt to specific language environments. Further investigation is needed to determine the significance of this language check.
+5. **Microsoft Office Registry Keys Read**
+    - **WinRAR.exe (PID: 1936)**
+        - WinRAR is reading Microsoft Office registry keys, suggesting a potential interaction with Office components. This action should be examined to understand the purpose and possible security implications.
+6. **Machine GUID Retrieval from Registry**
+    - **EQNEDT32.EXE (PID: 1924)**
+        - EQNEDT32.EXE is retrieving the Machine GUID from the registry. This activity requires investigation to determine the motive behind accessing this information and whether it poses a security risk.
+7. **Proxy Server Information Check**
+    - **EQNEDT32.EXE (PID: 1924)**
+        - EQNEDT32.EXE is checking proxy server information, indicating a potential attempt to interact with network proxy settings. Further analysis is needed to assess the purpose and potential security impact of this action.
+
+## Additional Information
+
+This URL is used to download a file named "network.exe" from the domain "andaluciabeach.net".
+
+Legitimate programs may use this URL to download legitimate files or updates from a trusted source.
+
+Malicious programs may use this URL to download and execute a malicious file named "network.exe" from the domain "andaluciabeach.net". The fact that the httpCode is "401" indicates that the request was unauthorized, which could be a sign of malicious activity. Additionally, the process_image and process_commandLine fields indicate that the request was made by the "EQNEDT32.EXE" process, which is not a commonly used legitimate program.
+
+![Network File Download](https://prod-files-secure.s3.us-west-2.amazonaws.com/f59f86c1-0398-4a18-8e00-a85263378b7d/81b5e1fa-d3f8-4d2a-8535-8c6066b8699a/Untitled.png)
+
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/f59f86c1-0398-4a18-8e00-a85263378b7d/d01c0cfc-328a-49dd-bce1-326ce0bf04b4/Untitled.png)
+
+## Final Conclusion
+
+The information provided in the analyst report highlights several suspicious and potentially malicious activities associated with the file EQNEDT32.EXE. These activities include suspicious connections, self-launching, reading internet settings, retrieving binaries or scripts from the internet, and engaging in various interactions with other processes and registry keys.
+
+While the report raises significant concerns about the file's behavior, it's important to note that deeming a file as truly suspicious or malicious requires a more in-depth analysis. Further investigation, including examining the file's code, behavior, and any associated network traffic, is necessary to determine the nature and intent of EQNEDT32.EXE.
+
+In the meantime, it is advisable to take precautionary measures such as isolating the system, restricting network access, and considering the temporary suspension of the file's execution until a thorough analysis is conducted.
+
+![Network File Download](https://prod-files-secure.s3.us-west-2.amazonaws.com/f59f86c1-0398-4a18-8e00-a85263378b7d/d8bbd884-37c2-4055-86df-8598fe736c8f/Untitled.png)
+
+![Image 2](https://file.notion.so/f/f/f59f86c1-0398-4a18-8e00-a85263378b7d/81b5e1fa-d3f8-4d2a-8535-8c6066b8699a/Untitled.png?id=30decd52-2b21-440c-85d0-38be8a321e18&table=block&spaceId=f59f86c1-0398-4a18-8e00-a85263378b7d&expirationTimestamp=1705449600000&signature=h9lS7Q8Lq83Ne0KcN7P_5tyQSbP_L5dPL5bBmA_YNqg&download=true&downloadName=Untitled.png)
+
+![Image 3](https://prod-files-secure.s3.us-west-2.amazonaws.com/f59f86c1-0398-4a18-8e00-a85263378b7d/4bd4e74b-d4cc-43f3-af43-9150b191e070/Untitled.png)
+
