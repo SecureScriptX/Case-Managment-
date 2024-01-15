@@ -1,0 +1,56 @@
+
+# Incident Report
+
+## Summary
+
+- **Score:** 100%
+- **Playbook Success Rate:** 100%
+- **Investigation Time:** 45 Minutes
+
+## SOC Alert Details
+
+| SEVERITY | DATE                | RULE NAME                                     | EVENTID | TYPE     |
+|----------|---------------------|-----------------------------------------------|---------|----------|
+| Medium   | Mar, 21, 2021, 12:26 PM | SOC140 - Phishing Mail Detected - Suspicious Task Scheduler | 82      | Exchange |
+
+- **EventID:** 82
+- **Event Time:** Mar, 21, 2021, 12:26 PM
+- **Rule:** SOC140 - Phishing Mail Detected - Suspicious Task Scheduler
+- **Level:** Security Analyst
+- **SMTP Address:** 189.162.189.159
+- **Source Address:** aaronluo@cmail.carleton.ca
+- **Destination Address:** mark@letsdefend.io
+- **E-mail Subject:** COVID19 Vaccine
+- **Device Action:** Blocked
+
+## Playbook Answers
+
+1. **Question:** Are there attachments or URLs in the email?
+   - **User answer:** Yes
+
+2. **Question:** Analyze Url/Attachment
+   - **User answer:** Malicious
+
+3. **Question:** Check If Mail Delivered to User?
+   - **User answer:** Not Delivered
+
+## Playbook Note
+
+- **When was it sent?** Mar, 21, 2021, 12:26 PM
+- **What is the email’s SMTP address?** 189.162.189.159
+- **What is the sender's address?** aaronluo@cmail.carleton.ca
+- **Is the mail content suspicious?** Yes
+- **What is the recipient address?** mark@letsdefend.io
+- **Note:** Upon closer examination, and after discovering the URL through VirusTotal, it has been determined that this file is classified as malicious. To validate my analysis, I utilized various OSINT tools, all of which corroborate that this is not a website you should open, let alone host on your system.
+
+## Extracted Artifacts
+
+| Value                                                     | Comment                           | Type           |
+|-----------------------------------------------------------|-----------------------------------|----------------|
+| https://files-ld.s3.us-east-2.amazonaws.com/72c812cf21909a48eb9cceb9e04b865d.zip | Final URL - Per VirusTotal        | E-mail Domain  |
+
+## Alert Answers
+
+- **Question:** Is this alert True Positive or False Positive?
+   - **Alert Note:** Malicious
+```
