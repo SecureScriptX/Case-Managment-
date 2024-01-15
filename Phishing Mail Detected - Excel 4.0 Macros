@@ -1,0 +1,49 @@
+
+# SOC Alert Details
+
+| SEVERITY | DATE                     | RULE NAME                                     | EVENTID | TYPE     |
+|----------|--------------------------|-----------------------------------------------|---------|----------|
+| High     | Jun, 13, 2021, 02:13 PM   | ⭐ SOC146 - Phishing Mail Detected - Excel 4.0 Macros | 93      | Exchange |
+
+⭐ This alert was generated from a real phishing attack.
+
+Event Details
+- **EventID:** 93
+- **Event Time:** Jun, 13, 2021, 02:13 PM
+- **Rule:** SOC146 - Phishing Mail Detected - Excel 4.0 Macros
+- **Level:** Security Analyst
+- **SMTP Address:** 24.213.228.54
+- **Source Address:** trenton@tritowncomputers.com
+- **Destination Address:** lars@letsdefend.io
+- **E-mail Subject:** RE: Meeting Notes
+- **Device Action:** Allowed
+
+Playbook Answers
+- **Question:** Are there attachments or URLs in the email?
+  - **User answer:** Yes
+- **Question:** Analyze Url/Attachment
+  - **User answer:** Malicious
+- **Question:** Check If Mail Delivered to User?
+  - **User answer:** Delivered
+- **Question:** Check If Someone Opened the Malicious File/URL?
+  - **User answer:** Opened
+- **Correct Answer:** Opened
+
+ Playbook Note
+- **When was it sent?** Jun, 13, 2021, 02:13 PM
+- **What is the emails SMTP address?** 24.213.228.54
+- **What is the sender's address?** trenton@tritowncomputers.com
+- **What is the recipient's address?** lars@letsdefend.io
+- **Is the mail content suspicious?** Yes
+
+After a thorough investigation and uncovering the URL through VirusTotal, the analysis confirms the classification of this file as malicious. To substantiate my findings, I employed multiple OSINT tools, including Hybrid Analysis, all of which converge on the conclusion that opening or hosting this website is strongly advised against.
+
+ Extracted Artifacts
+| Value           | Comment               | Type        |
+|-----------------|-----------------------|-------------|
+| 24.213.228.54   | Phishing (Malicious) | IP Address  |
+
+ Alert Answers
+- **Question:** Is this alert True Positive or False Positive?
+- **User answer:** Alert Note: Phishing (malicious)
+
