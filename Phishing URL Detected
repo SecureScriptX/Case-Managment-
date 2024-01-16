@@ -1,0 +1,53 @@
+## Investigation Time
+40 Minutes
+
+## SOC Alert Details
+| SEVERITY | DATE                 | RULE NAME                           | EVENTID | TYPE  |
+|----------|----------------------|-------------------------------------|---------|-------|
+| High     | Mar 22, 2021, 09:23 PM | SOC141 - Phishing URL Detected      | 86      | Proxy |
+
+## Event Details
+- **EventID:** 86
+- **Event Time:** Mar 22, 2021, 09:23 PM
+- **Rule:** SOC141 - Phishing URL Detected
+- **Level:** Security Analyst
+- **Source Address:** 172.16.17.49
+- **Source Hostname:** EmilyComp
+- **Destination Address:** 91.189.114.8
+- **Destination Hostname:** mogagrocol.ru
+- **Username:** ellie
+- **Request URL:** [http://mogagrocol.ru/wp-content/plugins/akismet/fv/index.php?email=ellie@letsdefend.io](http://mogagrocol.ru/wp-content/plugins/akismet/fv/index.php?email=ellie@letsdefend.io)
+- **User Agent:** Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36
+- **Device Action:** Allowed
+
+## Playbook Answers
+1. **Question:** Is the URL Malciious?
+   - **User answer:** Yes, Suspicious 
+2. **Question:** Has Anyone Accessed IP/URL/Domain?
+   - **User answer:** Accessed
+
+## Playbook Note
+- **Sent Time:** Mar 22, 2021, 09:23 PM
+- **Source Address:** 172.16.17.49
+- **Sender's Name:** EmilyComp
+- **Destination Address:** 91.189.114.8
+- **Mail Content Suspicious:** Yes
+- **Device Action:** Allowed
+- **Username:** ellie
+- **Request URL:** [http://mogagrocol.ru/wp-content/plugins/akismet/fv/index.php?email=ellie@letsdefend.io](http://mogagrocol.ru/wp-content/plugins/akismet/fv/index.php?email=ellie@letsdefend.io)
+- **User Agent:** Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36
+
+## Alert Answers
+- **Question:** Is this alert True Positive or False Positive?
+- **User answer:** [TP]
+
+## Final Thoughts
+wmpnscfg.exe, activated in a sandbox; a possible unusual occurrence? Possibly testing of legit software or malware mimicking legitimacy? Further probing of files, registry, and HTTP requests is key for understanding the task's nature in malware analysis. 
+
+## Extracted Artifacts
+| Value | Comment             | Type          |
+|-------|---------------------|---------------|
+| [http://mogagrocol.ru/wp-content/plugins/akismet/fv/index.php?email=ellie@letsdefend.io](http://mogagrocol.ru/wp-content/plugins/akismet/fv/index.php?email=ellie@letsdefend.io) | Suspicious URL | E-mail Domain |
+
+## Alert Note
+True Positive 
