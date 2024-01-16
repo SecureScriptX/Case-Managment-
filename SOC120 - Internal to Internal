@@ -1,0 +1,30 @@
+| SEVERITY | DATE                  | RULE NAME                                        | EVENTID | TYPE    |
+|----------|-----------------------|--------------------------------------------------|---------|---------|
+| Medium   | Feb 07, 2021, 04:24 AM | SOC120 - Phishing Mail Detected - Internal to Internal | 52      | Exchange|
+
+**Event Details:**
+- EventID: 52
+- Event Time: Feb 07, 2021, 04:24 AM
+- Rule: SOC120 - Phishing Mail Detected - Internal to Internal
+- Level: Security Analyst
+- SMTP Address: 172.16.20.3
+- Source Address: john@letsdefend.io
+- Destination Address: susie@letsdefend.io
+- E-mail Subject: Meeting
+- Device Action: Allowed
+
+**Playbook Answers:**
+- Question: Are there attachments or URLs in the email?
+- User answer: No
+
+**Playbook Note:**
+Upon closer examination, the internal email reveals no attachments or signs of malicious activity. The initial alert on this email was a false positive. The file is confirmed to be clean and poses no security threat.
+
+**Extracted Artifacts:**
+| Value        | Comment              | Type       |
+|--------------|----------------------|------------|
+| 172.16.20.3  | Non-malicious (FP)   | IP Address |
+
+**Alert Answers:**
+- Question: Is this alert True Positive or False Positive?
+- User answer: Clean
