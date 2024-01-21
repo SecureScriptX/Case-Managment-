@@ -63,5 +63,3 @@ The information provided in the analyst report highlights several suspicious and
 While the report raises significant concerns about the file's behavior, it's important to note that deeming a file as truly suspicious or malicious requires a more in-depth analysis. Further investigation, including examining the file's code, behavior, and any associated network traffic, is necessary to determine the nature and intent of EQNEDT32.EXE.
 
 In the meantime, it is advisable to take precautionary measures such as isolating the system, restricting network access, and considering the temporary suspension of the file's execution.
-
-
