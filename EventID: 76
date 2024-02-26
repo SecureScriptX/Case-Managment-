@@ -1,0 +1,44 @@
+
+| SEVERITY | DATE                    | RULE NAME                                  | EVENTID | TYPE    | ACTION  |
+|----------|-------------------------|-------------------------------------------------|----|---------|---------|
+| Medium   | Mar 14, 2021, 07:15 PM  | SOC137 - Malicious File/Script Download Attempt | 76 | Malware | Blocked |       
+
+**Event Details:**
+- **EventID:** 76
+- **Event Time:** Mar 14, 2021, 07:15 PM
+- **Rule:** SOC137 - Malicious File/Script Download Attempt
+- **Level:** Security Analyst
+- **Source Address:** 172.16.17.37
+- **Source Hostname:** NicolasPRD
+
+**File Details:**
+- **File Name:** INVOICE PACKAGE LINK TO DOWNLOAD.docm
+- **File Hash:** f2d0c66b801244c059f636d08a474079
+- **File Size:** 16.66 Kb
+
+**Device Action:**
+- **Action Taken:** Blocked
+
+
+**Analysis via Crowd-Sourced AI (Virustotal):**
+
+According to Virustotal's Crowd-Sourced AI, the examined file displays Code Insight with notable suspicious behavior. Specifically, the macro named "AutoOpen" within the "NewMacros.bas" module is flagged for its activities.
+
+**Behavioral Analysis:**
+- The "AutoOpen" subroutine, set to automatically execute upon document opening, raises concerns due to its actions.
+- The macro utilizes the Shell function to run a PowerShell command that initiates the download of a file from a specified URL ('https://filetransfer.io/data-package/UR2whuBv/download').
+- The downloaded file is subsequently invoked, introducing the potential for executing arbitrary code or deploying malicious payloads.
+
+**Malicious Indicators:**
+- Hispasec identifies this file as malicious, supporting the conclusion that the macro code is indeed harmful.
+- The PowerShell command within the "AutoOpen" subroutine, while obfuscated, reveals actions consistent with the creation of a new .NET WebClient object. This object, in turn, utilizes the DownloadString method to fetch and execute a file from the provided URL.
+
+**Signs of Malicious Behavior:**
+- Automatic execution upon document opening is a common tactic employed by malware to initiate malicious activities without user interaction.
+- Downloading and executing files from the internet, as demonstrated by the PowerShell command, is a suspicious behavior associated with malware and macro viruses.
+- The use of obfuscation in the PowerShell command further raises red flags, indicating an attempt to conceal the true purpose of the code and evade detection by security software.
+
+**Conclusion:**
+The analyzed macro exhibits multiple indicators of malicious behavior, including automatic execution, internet-based file retrieval, and code obfuscation. These elements collectively suggest a potential threat, possibly involving the execution of malicious payloads such as ransomware, spyware, or trojans.
+
+[SecureScriptX Case - #76](https://app.letsdefend.io/case-management/casedetail/securescriptx/76)
